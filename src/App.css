@@ -1,0 +1,235 @@
+/* Font Awesome class overwrite -Start */
+.fas,
+.fa-solid,
+.fa-thin {
+  color: #B18818;
+}
+
+td>.fas,
+td>.fa-solid,
+td>.fa-thin {
+  color: #000000;
+}
+
+button>.fas,
+button>.fa-solid,
+button>.fa-thin {
+  color: #FFFFFF;
+}
+/* Font Awesome class overwrite - End */
+
+.NavbarLogo {
+  width: 10vw;
+  min-width: '10vw';
+  margin-left: 2vw;
+}
+
+.NavbarLogoMobile {
+  width: 30vw;
+  max-width: '30vw';
+  margin-left: 2vw;
+}
+
+.NavbarProfileImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  margin-right: 2vw;
+}
+
+.NavbarIcon {
+  font-size: 25px;
+  color: white;
+  margin-right: 10px;
+}
+
+.homeBgImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(assets/images/home/desktop/hero_section.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-position-x: 95%;
+}
+
+.forCompaniesBgImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(assets/images/home/desktop/img_comapanies.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.homeMobileBgImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(assets/images/home/mobile/Hero_section.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.goldenFont {
+  color: #B18818;
+}
+
+.css-13cymwt-control {
+  padding: 0px !important;
+  border-radius: 0px !important;
+  border: none !important;
+}
+
+Select {
+  border-radius: 0px;
+  border: none;
+}
+
+.btn-green,
+.btn-green:hover,
+.btn-green:active,
+.btn-green:visited,
+.btn-green:focus {
+  color: #fff;
+  background-color: #135441;
+  border: 1px solid #135441;
+}
+
+.btn-red,
+.btn-red:hover,
+.btn-red:active,
+.btn-red:visited,
+.btn-red:focus {
+  color: #fff;
+  background-color: #A2000C;
+  border: 1px solid #A2000C;
+}
+
+.btn-golden,
+.btn-golden:hover,
+.btn-golden:active,
+.btn-golden:visited,
+.btn-golden:focus {
+  color: #fff;
+  background-color: #B18818;
+  border: 1px solid #B18818;
+}
+
+.btn-golden-outline,
+.btn-golden-outline:hover,
+.btn-golden-outline:active,
+.btn-golden-outline:visited,
+.btn-golden-outline:focus {
+  color: #B18818;
+  background-color: white;
+  border: 1px solid #B18818;
+}
+
+.largeCheckBoxGreen {
+  border: 1px solid #135441;
+  transform: scale(1.5);
+  margin: 1vh 0.5vw 0px 0px;
+}
+
+.largeCheckBoxRed {
+  border: 1px solid #A2000C;
+  transform: scale(1.5);
+  margin: 1vh 0.5vw 0px 0px;
+}
+
+.largeCheckBoxGold {
+  border: 1px solid #B18818;
+  transform: scale(1.5);
+  margin: 1vh 0.5vw 0px 0px;
+}
+
+.whitePageBackground {
+  background-color: white;
+}
+
+.goldenPageBackground {
+  background-color: #ECCF70;
+}
+
+.btn-accept {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.btn-accept:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-accept)+.btn:active,
+.btn-accept:checked+.btn>.fa-circle-check {
+  color: #FFFFFF;
+  background-color: #135441;
+  border-color: #135441;
+}
+
+.btn-accept-icon {
+  color: #135441;
+}
+
+.btn-reject {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.btn-reject:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-reject)+.btn:active,
+.btn-reject:checked+.btn>.fa-circle-xmark {
+  color: #FFFFFF;
+  background-color: #A2000C;
+  border-color: #A2000C;
+}
+
+.btn-reject-icon {
+  color: #A2000C;
+}
+
+.fieldErrorText {
+  color: crimson;
+}
+
+.goldenSubmitButton {
+  background-color: #B18818;
+  color: white;
+}
+
+.napoleonRedColor {
+  color: #A2000C !important;
+}
+
+.napoleonGreenColor {
+  color: #135441 !important;
+}
+
+.napoleonWhiteColor {
+  color: white !important;
+}
+
+.napoleonBlackColor {
+  color: black !important;
+}
+
+.napoleonGreyBackground {
+  background-color: #f2f2f2 !important;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8'/%3E%3C/svg%3E");
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: white;
+  transform-origin: 0%;
+  z-index: 2000;
+}
