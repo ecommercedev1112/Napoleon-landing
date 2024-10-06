@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: glacial indifference;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Glacial Indifference"),
+    url(https://fonts.cdnfonts.com/s/31913/GlacialIndifference-Regular.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: glacial indifference;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Glacial Indifference"),
+    url(https://fonts.cdnfonts.com/s/31913/GlacialIndifference-Bold.woff)
+      format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-glacial-indifference: "Glacial Indifference", sans-serif;
+}
+
+body {
+  font-family: var(--font-glacial-indifference);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 44 100% 100%;
+    --foreground: 44 5% 10%;
+    --card: 44 50% 100%;
+    --card-foreground: 44 5% 15%;
+    --popover: 44 100% 100%;
+    --popover-foreground: 44 100% 10%;
+    --primary: 44 76.1% 39.4%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 44 30% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 6 30% 95%;
+    --muted-foreground: 44 5% 40%;
+    --accent: 6 30% 90%;
+    --accent-foreground: 44 5% 15%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 44 5% 100%;
+    --border: 44 30% 82%;
+    --input: 44 30% 50%;
+    --ring: 44 76.1% 39.4%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 44 50% 10%;
+    --foreground: 44 5% 100%;
+    --card: 44 50% 10%;
+    --card-foreground: 44 5% 100%;
+    --popover: 44 50% 5%;
+    --popover-foreground: 44 5% 100%;
+    --primary: 44 76.1% 39.4%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 44 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 6 30% 25%;
+    --muted-foreground: 44 5% 65%;
+    --accent: 6 30% 25%;
+    --accent-foreground: 44 5% 95%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 44 5% 100%;
+    --border: 44 30% 50%;
+    --input: 44 30% 50%;
+    --ring: 44 76.1% 39.4%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+#radix-\:R1dj6\: > button {
+  display: none;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: white;
+  transform-origin: 0%;
+  z-index: 2000;
+}
