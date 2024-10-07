@@ -25,10 +25,7 @@ export default function Footer() {
                 <Link href="/about" className="">
                   About
                 </Link>
-                <Link
-                  href="/privacy"
-                  className="hover:underline whitespace-nowrap"
-                >
+                <Link href="/privacy" className=" whitespace-nowrap">
                   User Agreement
                 </Link>
               </div>
