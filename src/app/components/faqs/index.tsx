@@ -59,10 +59,7 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
                   >
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent
-                    className="text-sm md:text-[1.1rem] font-light bg-background p-4"
-                    style={{ lineHeight: "2rem" }}
-                  >
+                  <AccordionContent className="text-md md:text-[1.1rem] font-light bg-background p-4">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
