@@ -40,7 +40,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 const ElevateJobSearch: React.FC = () => {
   return (
     <section id="elevate_job_search" className="bg-[#f2f2f2]">
-      <div className="w-full max-w-[85rem] mx-auto py-4 md:py-20 md:px-20 lg:px-28  2xl:max-w-[112rem] 2xl:px-40  2xl:py-28 ">
+      <div className="w-full max-w-[85rem] mx-auto py-4 md:py-12 md:px-20 lg:px-28  2xl:max-w-[112rem] 2xl:px-40  2xl:py-28 ">
         <div className="max-w-2xl 2xl:max-w-5xl mx-auto hidden md:block">
           <p
             className="text-[1.55rem] text-center font-medium leading-relaxed mt-16 2xl:text-[2.2rem] 2xl:leading-[3rem]"
