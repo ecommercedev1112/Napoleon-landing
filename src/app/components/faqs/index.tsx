@@ -17,7 +17,7 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
 
   return (
     <section id={`${type}_faqs`}>
-      <div className="max-w-7xl container mx-auto px-4 py-6 md:py-20 md:px-16 2xl:px-6 w-full">
+      <div className=" px-4 w-full max-w-[85rem] mx-auto py-8 md:py-20 md:px-20 lg:px-28  2xl:max-w-[112rem] 2xl:px-40  2xl:py-28">
         <h1
           className={`text-2xl font-light text-center md:text-5xl 2xl:text-6xl md:font-medium w-full ${
             isCompany ? "md:text-left" : "md:text-right"
@@ -54,7 +54,7 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
                   <AccordionTrigger
                     className={`${
                       type === "company" ? "text-red" : "text-green"
-                    } font-bold text-md md:text-[1.4rem] 2xl:text-[1.6rem] text-left px-8`}
+                    } font-bold text-md md:text-[1.4rem] 2xl:text-[1.8rem] text-left px-8`}
                     style={{ textDecoration: "none" }} // Inline style to remove underline
                   >
                     {faq.question}

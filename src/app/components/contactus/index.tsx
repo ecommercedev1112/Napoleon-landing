@@ -60,9 +60,9 @@ const ContactUs: React.FC = () => {
     <section
       id="contactus"
       ref={contactUsSectionRef}
-      className="bg-[#f2f2f2] py-16"
+      className="bg-[#f2f2f2] w-full  mx-auto py-8 md:py-20 md:px-20 lg:px-28   2xl:px-40  2xl:py-28 "
     >
-      <p className="text-2xl md:text-[2.8rem] 2xl:text-[3.5rem]  font-medium text-center text-gold py-4 md:py-4">
+      <p className="text-2xl md:text-[2.8rem] 2xl:text-[3.5rem]  font-medium text-center text-gold py-4 md:py-4 2xl:py-6">
         More questions left? Contact Us
       </p>
 
@@ -87,7 +87,7 @@ const ContactUs: React.FC = () => {
                 value={role}
               />
               <label
-                className="text-lg md:text-[1.5rem] 2xl:text-[2rem] ml-1 font-medium"
+                className="text-lg md:text-[1.5rem] 2xl:text-[1.6rem] ml-1 font-medium"
                 htmlFor={`rdo${role}`}
               >
                 I’m{" "}
@@ -187,7 +187,7 @@ const ContactUs: React.FC = () => {
               id="rdoConsent"
             />
             <label
-              className="text-lg md:text-[1.5rem] 2xl:text-[2rem] ml-1"
+              className="text-lg md:text-[1.5rem] 2xl:text-[1.6rem] ml-1"
               htmlFor="rdoConsent"
             >
               I consent to store my contact details.

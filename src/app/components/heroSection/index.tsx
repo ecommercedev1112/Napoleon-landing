@@ -9,7 +9,7 @@ interface ActionButtonProps {
 const ActionButton: React.FC<ActionButtonProps> = ({ label }) => (
   <Button
     size="xl"
-    className="uppercase font-bold text-[1.5rem] 2xl:text-[2rem] rounded-full 2xl:py-10 px-24"
+    className="uppercase font-bold text-[1.5rem] 2xl:text-[1.6rem] rounded-full 2xl:py-10 2xl:px-36"
   >
     {label}
   </Button>
@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
   return (
     <>
       {/* Large Screen Section (Visible on md and above) */}
-      <section id="hero" className="hidden md:block bg-white w-full pr-6">
-        <div className="mx-auto w-full h-auto 2xl:min-h-screen md:bg-hero-image  bg-contain bg-no-repeat bg-right-top px-[4.9rem]">
-          <div className="grid md:grid-cols-2 h-full pt-[4.4rem]  ">
-            <div className="flex items-start justify-center">
-              <div>
+      <section id="hero" className="hidden md:block bg-white w-full">
+        <div className="mx-auto w-full h-auto  md:bg-hero-image  bg-contain bg-no-repeat bg-right-top px-[4.9rem] 2xl:px-[6.6rem] 2xl:pb-2  ">
+          <div className="grid md:grid-cols-2 h-full pt-[4.4rem] w-full">
+            <div className="flex items-start justify-center w-full">
+              <div className="w-full">
                 <h1
                   className=" block 2xl:hidden md:text-5xl lg:text-[3.63rem] md:font-light w-full 2xl:text-[5rem]"
                   style={{ lineHeight: "4.5rem" }}
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                   THE RIGHT TALENT MATCHED TO THE BEST ROLES
                 </h1>
                 <h1
-                  className=" hidden 2xl:block md:text-5xl lg:text-[3.63rem] md:font-light w-full 2xl:text-[5rem]"
+                  className=" hidden 2xl:block md:text-5xl lg:text-[3.63rem] md:font-light w-full 2xl:text-[5rem] 2xl:pt-6"
                   style={{ lineHeight: "6rem" }}
                 >
                   THE RIGHT TALENT MATCHED TO THE BEST ROLES
@@ -44,12 +44,12 @@ const Hero: React.FC = () => {
                 </p>
 
                 <p
-                  className="hidden 2xl:block my-24 md:text-xl lg:text-[1.8rem] 2xl:text-[2.8rem] font-extralight max-w-2xl"
+                  className="hidden 2xl:block my-12 md:text-xl lg:text-[1.8rem] 2xl:text-[2.6rem] font-extralight max-w-2xl"
                   style={{ lineHeight: "3.6rem" }}
                 >
                   Meaningful Connections Through Human-Curated Matchmaking
                 </p>
-                <div className="mt-12  2xl:mt-28  lg:mb-16 flex gap-4 2xl:gap-10 items-center">
+                <div className="mt-12  2xl:mt-20  lg:mb-16 2xl:mb-20 flex gap-4 2xl:gap-10 items-center">
                   <ActionButton label="CANDIDATES" />
                   <ActionButton label="COMPANIES" />
                 </div>

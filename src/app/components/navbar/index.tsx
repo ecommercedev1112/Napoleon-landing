@@ -11,7 +11,7 @@ const NavLinks = [
 
 export default function Header() {
   return (
-    <header className="bg-backgroundalt text-white h-[10vh] 2xl:h-[12vh] flex sticky top-0 left-0 right-0 z-50 w-full">
+    <header className="bg-backgroundalt text-white h-[10vh]  flex sticky top-0 left-0 right-0 z-50 w-full">
       <div className="flex justify-between items-center w-full text-xl font-light px-4 md:px-10">
         <Link href="/" className="flex items-center">
           <Image

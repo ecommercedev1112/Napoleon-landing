@@ -39,9 +39,9 @@ export default function HiringEmployersList() {
   return (
     <section
       id="hiring_employers_list"
-      className="container mx-auto px-4 py-12 md:py-20 md:px-10"
+      className=" px-4 py-8  max-w-[85rem] 2xl:max-w-[112rem] md:py-12  md:px-[4.9rem]  mx-auto    2xl:py-28 w-full"
     >
-      <h2 className="text-xl md:text-3xl lg:text-[2.8rem] 2xl:text-[3.5rem]  font-bold text-center mb-10 text-gold">
+      <h2 className="text-xl py-2 2xl:py-4 md:text-3xl lg:text-[2.8rem] 2xl:text-[3.5rem]  font-bold text-center mb-8 text-gold">
         Current Top Employers Hiring
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
