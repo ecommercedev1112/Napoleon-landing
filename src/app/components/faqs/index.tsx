@@ -17,20 +17,20 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
 
   return (
     <section id={`${type}_faqs`}>
-      <div className="max-w-7xl container mx-auto py-6 md:py-24 md:px-16">
+      <div className="max-w-7xl container mx-auto px-4 py-6 md:py-20 md:px-16 w-full">
         <h1
-          className={`text-2xl font-light text-center md:${
-            type === "company" ? "text-left" : "text-right"
-          } md:text-4xl md:font-medium w-full`}
+          className={`text-2xl font-light text-center md:text-5xl md:font-medium w-full ${
+            isCompany ? "md:text-left" : "md:text-right"
+          }`}
         >
           {isCompany ? "For Companies" : "For Candidates"}
         </h1>
         <div
-          className={`flex flex-col md:flex-row gap-8 mt-8 lg:mt-8 ${
+          className={`flex flex-col md:flex-row gap-8 mt-4  ${
             isCompany ? "" : "md:flex-row-reverse"
           }`}
         >
-          <div className="md:w-1/2">
+          <div className="w-full md:w-2/3 flex-grow-0">
             <Image
               src={
                 isCompany
@@ -38,12 +38,12 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
                   : "/assets/images/img_candidates-CDrrYNzK.png"
               }
               alt={isCompany ? "Company image" : "Candidate image"}
-              width={600}
-              height={600}
-              className="rounded-lg object-cover w-full h-full px-6"
+              width={480}
+              height={635}
+              className="rounded-lg object-cover w-full h-auto" // Ensure height auto for proper scaling
             />
           </div>
-          <div className="md:w-2/3 px-6">
+          <div className="w-full">
             <Accordion
               type="single"
               collapsible
@@ -54,7 +54,7 @@ const FAQS: React.FC<FAQSProps> = ({ type, faqs }) => {
                   <AccordionTrigger
                     className={`${
                       type === "company" ? "text-red" : "text-green"
-                    } font-bold text-md md:text-xl text-left px-8`}
+                    } font-bold text-md md:text-[1.4rem] text-left px-8`}
                     style={{ textDecoration: "none" }} // Inline style to remove underline
                   >
                     {faq.question}

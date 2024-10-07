@@ -7,7 +7,7 @@ interface ActionButtonProps {
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({ label }) => (
-  <Button size="xl" className="uppercase font-bold text-[1.4rem] rounded-full">
+  <Button size="xl" className="uppercase font-bold text-[1.5rem] rounded-full">
     {label}
   </Button>
 );
@@ -16,24 +16,24 @@ const Hero: React.FC = () => {
   return (
     <>
       {/* Large Screen Section (Visible on md and above) */}
-      <section id="hero" className="hidden md:block bg-white w-full">
-        <div className="mx-auto w-full md:bg-hero-image bg-contain bg-no-repeat bg-right-top px-16 py-12">
-          <div className="grid md:grid-cols-2 pt-8 h-full">
+      <section id="hero" className="hidden md:block bg-white w-full pr-6">
+        <div className="mx-auto w-full md:bg-hero-image bg-contain bg-no-repeat bg-right-top  px-[4.9rem]">
+          <div className="grid md:grid-cols-2 h-full pt-[4.4rem] mx-w-[39.125rem]">
             <div className="flex items-start justify-center">
               <div>
                 <h1
-                  className="md:text-5xl lg:text-[3.4rem] md:font-light w-full"
-                  style={{ lineHeight: "4rem" }}
+                  className="md:text-5xl lg:text-[3.63rem] md:font-light w-full"
+                  style={{ lineHeight: "4.5rem" }}
                 >
                   THE RIGHT TALENT MATCHED TO THE BEST ROLES
                 </h1>
                 <p
-                  className="mt-8 lg:mt-12 md:text-xl lg:text-[1.7rem] font-extralight max-w-md"
-                  style={{ lineHeight: "2.5rem" }}
+                  className="my-10 md:text-xl lg:text-[1.8rem] font-extralight max-w-md"
+                  style={{ lineHeight: "2.6rem" }}
                 >
                   Meaningful Connections Through Human-Curated Matchmaking
                 </p>
-                <div className="mt-8 lg:mt-16  lg:mb-16 flex gap-4 items-center">
+                <div className="mt-12  lg:mb-16 flex gap-4 items-center">
                   <ActionButton label="CANDIDATES" />
                   <ActionButton label="COMPANIES" />
                 </div>
