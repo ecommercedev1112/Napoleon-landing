@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-backgroundalt text-white  md:h-[10vh] my-auto pt-1 md:sticky bottom-0">
+    <footer className="bg-backgroundalt text-white  md:h-[10vh] my-auto  md:sticky bottom-0">
       <div className=" mx-auto px-6 md:px-12 lg:pl-[4.5rem]">
         {/* Top section */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -19,14 +19,17 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="text-center p-2">
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 text-sm  font-light ">
+          <div className="text-center ">
+            <div className=" md:ml-4 md:mt-2 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-sm  font-light ">
               <div className=" flex flex-row gap-10 md:gap-3 justify-between w-2/3 md:w-full">
                 <Link href="/about" className="hover:underline">
                   About
                 </Link>
-                <Link href="/privacy" className="hover:underline">
-                  Privacy Policy
+                <Link
+                  href="/privacy"
+                  className="hover:underline whitespace-nowrap"
+                >
+                  User Agreement
                 </Link>
               </div>
               <div className=" flex flex-row gap-10 md:gap-3 justify-between w-2/3 md:w-full">
@@ -34,14 +37,16 @@ export default function Footer() {
                   href="/terms"
                   className="hover:underline whitespace-nowrap"
                 >
-                  User Agreement
+                  Privacy Policy
                 </Link>
                 <Link href="/help" className="hover:underline">
                   Help
                 </Link>
               </div>
             </div>
-            <p className=" hidden  md:block text-xs mt-1">Napoleon © 2024</p>
+            <p className=" hidden  md:block text-xs mt-1 ml-2">
+              Napoleon © 2024
+            </p>
           </div>
 
           {/* Contact Information */}

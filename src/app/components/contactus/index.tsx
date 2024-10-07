@@ -24,6 +24,7 @@ const ContactUs: React.FC = () => {
     watch,
     formState: { errors },
   } = useForm<FormInputs>({ mode: "all" });
+  console.log(errors);
 
   const watchRole = watch("role");
 
@@ -32,7 +33,7 @@ const ContactUs: React.FC = () => {
   };
 
   const renderErrorMessage = (message?: string) =>
-    message ? <p className="text-red text-lg">{message}</p> : null;
+    message ? <p className="text-[#dc143c] text-[1.25rem]">{message}</p> : null;
 
   const renderInputField = (
     id: string,
@@ -47,7 +48,7 @@ const ContactUs: React.FC = () => {
         id={id}
         type={type}
         {...register(id as keyof FormInputs, validationRules)}
-        className="w-full h-20 placeholder:text-xl p-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full h-[4.4rem] placeholder:text-[1.5rem] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
         placeholder={placeholder}
         disabled={disabled}
       />
@@ -61,32 +62,35 @@ const ContactUs: React.FC = () => {
       ref={contactUsSectionRef}
       className="bg-[#f2f2f2] py-16"
     >
-      <p className="text-2xl md:text-5xl text-center text-gold py-4 md:py-6">
-        More questions? Contact Us
+      <p className="text-2xl md:text-[2.8rem]  font-medium text-center text-gold py-4 md:py-4">
+        More questions left? Contact Us
       </p>
 
       <form
         autoComplete="off"
-        className="mx-auto flex flex-col md:justify-center md:items-center px-4 max-w-4xl"
+        className="mx-auto flex flex-col md:justify-center md:items-center px-4 max-w-3xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Role Selection */}
-        <div className="flex flex-col md:flex-row justify-start items-start gap-0 md:gap-10">
+        <div className="flex flex-col md:flex-row justify-start items-start gap-0 md:gap-16">
           {["CANDIDATE", "COMPANY"].map((role) => (
             <div
-              className="flex flex-row justify-center items-center py-1"
+              className="flex flex-row justify-center items-center py-6"
               key={role}
             >
               <Input
                 {...register("role", { required: "Select one of the roles" })}
-                className="w-5 h-5 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
+                className="w-6 h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
         before:absolute before:top-1/2 before:left-1/2 before:w-2 before:h-2 before:bg-white before:rounded-full before:transform before:scale-0 checked:before:scale-100 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%]"
                 type="radio"
                 id={`rdo${role}`}
                 value={role}
               />
-              <label className="text-lg md:text-xl ml-3" htmlFor={`rdo${role}`}>
-                I’m a{" "}
+              <label
+                className="text-lg md:text-[1.5rem] ml-1 font-medium"
+                htmlFor={`rdo${role}`}
+              >
+                I’m{" "}
                 {role === "CANDIDATE" ? "Candidate" : "Company representative"}
               </label>
             </div>
@@ -95,7 +99,11 @@ const ContactUs: React.FC = () => {
         {renderErrorMessage(errors.role?.message)}
 
         {/* Form Fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 w-full">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 ${
+            Object.keys(errors).length > 0 ? " gap-y-2 gap-x-8" : "gap-8"
+          }  py-4 w-full`}
+        >
           {renderInputField(
             "name",
             "Name",
@@ -158,7 +166,7 @@ const ContactUs: React.FC = () => {
                 message: "Inquiry should be at least 10 characters",
               },
             })}
-            className="w-full h-22 p-2 border border-gray-300 rounded-md outline-none focus:ring-2"
+            className="w-full h-22 p-2 border border-gray-300 rounded-none placeholder:text-[1.5rem] outline-none focus:ring-2"
             placeholder="Inquiries"
             style={{ resize: "none" }}
           />
@@ -173,12 +181,15 @@ const ContactUs: React.FC = () => {
                 required:
                   "Please provide consent to store your contact details.",
               })}
-              className="w-5 h-5 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
+              className="w-6 h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
         before:absolute before:top-1/2 before:left-1/2 before:w-2 before:h-2 before:bg-white before:rounded-full before:transform before:scale-0 checked:before:scale-100 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%]"
               type="checkbox"
               id="rdoConsent"
             />
-            <label className="text-lg md:text-xl ml-3" htmlFor="rdoConsent">
+            <label
+              className="text-lg md:text-[1.5rem] ml-1"
+              htmlFor="rdoConsent"
+            >
               I consent to store my contact details.
             </label>
           </div>
@@ -189,9 +200,9 @@ const ContactUs: React.FC = () => {
         <Button
           type="submit"
           size="xl"
-          className="mx-auto md:w-2/3 mt-4 rounded-full font-bold text-xl md:text-2xl"
+          className="mx-auto  w-full  uppercase  md:w-[75%] mt-4 rounded-full font-bold text-xl md:text-2xl h-[3.1rem]  "
         >
-          Submit
+          SEND
         </Button>
       </form>
     </section>
