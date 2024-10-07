@@ -48,7 +48,7 @@ const ContactUs: React.FC = () => {
         id={id}
         type={type}
         {...register(id as keyof FormInputs, validationRules)}
-        className="w-full h-[4.4rem] placeholder:text-[1.5rem] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full h-[4.4rem] 2xl:h-[4.6rem] placeholder:text-[1.5rem] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
         placeholder={placeholder}
         disabled={disabled}
       />
@@ -62,13 +62,13 @@ const ContactUs: React.FC = () => {
       ref={contactUsSectionRef}
       className="bg-[#f2f2f2] py-16"
     >
-      <p className="text-2xl md:text-[2.8rem]  font-medium text-center text-gold py-4 md:py-4">
+      <p className="text-2xl md:text-[2.8rem] 2xl:text-[3.5rem]  font-medium text-center text-gold py-4 md:py-4">
         More questions left? Contact Us
       </p>
 
       <form
         autoComplete="off"
-        className="mx-auto flex flex-col md:justify-center md:items-center px-4 max-w-3xl"
+        className="mx-auto flex flex-col md:justify-center md:items-center px-4 max-w-3xl 2xl:max-w-4xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Role Selection */}
@@ -87,7 +87,7 @@ const ContactUs: React.FC = () => {
                 value={role}
               />
               <label
-                className="text-lg md:text-[1.5rem] ml-1 font-medium"
+                className="text-lg md:text-[1.5rem] 2xl:text-[2rem] ml-1 font-medium"
                 htmlFor={`rdo${role}`}
               >
                 I’m{" "}
@@ -174,7 +174,7 @@ const ContactUs: React.FC = () => {
         </div>
 
         {/* Consent Checkbox */}
-        <div className="mt-4">
+        <div className="mt-4 2xl:py-4">
           <div className="flex items-center">
             <Input
               {...register("consent", {
@@ -187,7 +187,7 @@ const ContactUs: React.FC = () => {
               id="rdoConsent"
             />
             <label
-              className="text-lg md:text-[1.5rem] ml-1"
+              className="text-lg md:text-[1.5rem] 2xl:text-[2rem] ml-1"
               htmlFor="rdoConsent"
             >
               I consent to store my contact details.
@@ -200,7 +200,7 @@ const ContactUs: React.FC = () => {
         <Button
           type="submit"
           size="xl"
-          className="mx-auto  w-full  uppercase  md:w-[75%] mt-4 rounded-full font-bold text-xl md:text-2xl h-[3.1rem]  "
+          className="mx-auto  w-full  uppercase  md:w-[75%] mt-4 rounded-full font-bold text-xl 2xl:text-3xl md:text-2xl h-[3.1rem] 2xl:h-[3.5rem]  "
         >
           SEND
         </Button>

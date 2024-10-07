@@ -41,14 +41,14 @@ export default function HiringEmployersList() {
       id="hiring_employers_list"
       className="container mx-auto px-4 py-12 md:py-20 md:px-10"
     >
-      <h2 className="text-xl md:text-3xl lg:text-[2.8rem] font-bold text-center mb-10 text-gold">
+      <h2 className="text-xl md:text-3xl lg:text-[2.8rem] 2xl:text-[3.5rem]  font-bold text-center mb-10 text-gold">
         Current Top Employers Hiring
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {employers.map((employer, index) => (
-          <Card key={index} className="flex flex-col p-0 relative">
+          <Card key={index} className="relative flex flex-col p-0">
             {/* Card Header with Image */}
-            <CardHeader className="p-0">
+            <CardHeader className="p-0 relative">
               <Image
                 src={employer.image}
                 alt="People working"
@@ -56,7 +56,7 @@ export default function HiringEmployersList() {
                 height={200}
                 className="w-full h-full object-cover rounded-t-lg"
               />
-              <div className="absolute bottom-[430px] left-6 z-0">
+              <div className="absolute bottom-[-40px] left-6 z-0">
                 <Image
                   src={employer.logo}
                   alt={`${employer.name} logo`}
@@ -68,21 +68,21 @@ export default function HiringEmployersList() {
             </CardHeader>
             {/* Card Content */}
             <CardContent className="flex-grow z-10">
-              <CardTitle className="text-center py-4 text-[1.8rem] font-medium px-2">
+              <CardTitle className="text-center py-4 text-[1.8rem] 2xl:text-[2.5rem] font-medium px-2">
                 {employer.name}
               </CardTitle>
-              <p className="text-2xl text-gray-600 py-4 text-center leading-relaxed">
+              <p className="text-2xl 2xl:text-3xl  text-gray-600 py-4 text-center leading-relaxed 2xl:leading-loose">
                 {employer.description}
               </p>
             </CardContent>
             {/* Card Footer */}
             <CardFooter className="flex justify-between items-center">
-              <span className="text-xl font-medium">
+              <span className="text-xl font-medium 2xl:text-2xl">
                 {employer.activePositions} active positions
               </span>
               <Button
                 variant="outline"
-                className="rounded-full text-lg p-4 font-bold text-primary"
+                className="rounded-full text-lg 2xl:text-2xl  p-4 2xl:p-8 font-bold text-primary"
               >
                 FIND MORE
               </Button>

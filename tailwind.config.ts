@@ -63,15 +63,15 @@ const config: Config = {
       backgroundImage: {
         "hero-image": "url('/assets/images/hero_section.png')",
       },
-      lineHeight: {
-        "extra-loose": "2.5",
-        "12": "3rem",
-      },
+
       fontFamily: {
         glacial: ["var(--font-glacial-indifference)", "sans-serif"],
       },
       textColor: {
         gold: "#b8860b",
+      },
+      screens: {
+        "2xl": "1536px",
       },
     },
   },
