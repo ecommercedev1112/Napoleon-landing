@@ -59,7 +59,7 @@ export const HowItWorks = () => {
         </h1>
 
         <p
-          className=" block 2xl:hidden text-center md:text-left mt-4 md:mt-14  lg:mt-12 md:text-xl lg:text-[1.6rem 2xl:text-[2rem] max-w-[30rem] 2xl:max-w-[52rem] font-extralight"
+          className=" block 2xl:hidden text-center md:text-left mt-4 md:mt-14 md:mb-10 lg:mt-12 md:text-xl lg:text-[1.6rem 2xl:text-[2rem] max-w-[20rem] md:max-w-[30rem] 2xl:max-w-[52rem] font-extralight"
           style={{ lineHeight: "2rem" }}
         >
           We care about your comfort, so our team has created a video tutorial
@@ -67,7 +67,7 @@ export const HowItWorks = () => {
         </p>
 
         <p
-          className=" hidden 2xl:block text-center md:text-left mt-4 md:mt-14  lg:mt-12 md:text-xl lg:text-[1.6rem 2xl:text-[2rem] max-w-[30rem] 2xl:max-w-[52rem] font-extralight"
+          className=" hidden 2xl:block text-center md:text-left mt-4 md:mt-14 md:mb-10 lg:mt-12 md:text-xl lg:text-[1.6rem 2xl:text-[2rem] max-w-[30rem] 2xl:max-w-[52rem] font-extralight"
           style={{ lineHeight: "2.8rem" }}
         >
           We care about your comfort, so our team has created a video tutorial
@@ -89,7 +89,7 @@ export const HowItWorks = () => {
               </video>
               <h2
                 className={`text-2xl font-bold w-full 2xl:text-4xl ${
-                  video.title === "For Companies" ? "text-right" : "text-left"
+                  video.title === "For Companies" ? "md:text-right" : "text-left"
                 } ${video.color}`}
               >
                 {video.title}

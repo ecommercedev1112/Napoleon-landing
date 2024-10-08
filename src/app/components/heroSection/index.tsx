@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               <ActionButton label="CANDIDATES" />
               <ActionButton label="COMPANIES" />
             </div>
-            <p className="text-lg" style={{ lineHeight: "2.5rem" }}>
+            <p className="text-lg py-2.5 px-0 text-[5vw]" style={{ lineHeight: "2.5rem" }}>
               We create meaningful connections between candidates and employers
               through a carefully managed matchmaking service overseen by human
               administrators.

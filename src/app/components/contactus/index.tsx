@@ -75,7 +75,7 @@ const ContactUs: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-start items-start gap-0 md:gap-16">
           {["CANDIDATE", "COMPANY"].map((role) => (
             <div
-              className="flex flex-row justify-center items-center py-6"
+              className="flex flex-row justify-center items-center py-1.5 px-0 md:py-6"
               key={role}
             >
               <Input

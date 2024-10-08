@@ -71,7 +71,7 @@ export default function HiringEmployersList() {
               <CardTitle className="text-center py-4 text-[1.8rem] 2xl:text-[2.5rem] font-medium px-2">
                 {employer.name}
               </CardTitle>
-              <p className="text-2xl 2xl:text-3xl  text-gray-600 py-4 text-center leading-relaxed 2xl:leading-loose">
+              <p className="text-[3vw] md:text-xl xl:text-2xl xl:leading-8 2xl:text-2xl text-gray-600 py-4 text-center leading-relaxed">
                 {employer.description}
               </p>
             </CardContent>
