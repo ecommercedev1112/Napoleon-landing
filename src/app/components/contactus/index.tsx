@@ -33,7 +33,9 @@ const ContactUs: React.FC = () => {
   };
 
   const renderErrorMessage = (message?: string) =>
-    message ? <p className="text-[#dc143c] text-[1.25rem]">{message}</p> : null;
+    message ? (
+      <p className="text-[#dc143c] text-[1rem] md:text-lg">{message}</p>
+    ) : null;
 
   const renderInputField = (
     id: string,
@@ -48,7 +50,7 @@ const ContactUs: React.FC = () => {
         id={id}
         type={type}
         {...register(id as keyof FormInputs, validationRules)}
-        className="w-full h-[4.4rem] 2xl:h-[4.6rem] placeholder:text-[1.5rem] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full  h-[3.8rem] md:h-[4.4rem] text-[1rem] placeholder:text-[1rem] md:text-[calc(1.275rem+.3vw)] 2xl:h-[4.6rem] md:placeholder:text-[calc(1.275rem+.3vw)] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
         placeholder={placeholder}
         disabled={disabled}
       />
@@ -60,36 +62,33 @@ const ContactUs: React.FC = () => {
     <section
       id="contactus"
       ref={contactUsSectionRef}
-      className="bg-[#f2f2f2] w-full  mx-auto py-8 md:py-20 md:px-20 lg:px-28   2xl:px-40  2xl:py-28 "
+      className="bg-[#f2f2f2] w-full py-[5%] px-6 "
     >
-      <p className="text-2xl md:text-[2.8rem] 2xl:text-[3.5rem]  font-medium text-center text-gold py-4 md:py-4 2xl:py-6">
+      <p className=" text-[6vw] md:text-[3vw]  font-medium text-center text-gold py-4 md:py-4 2xl:py-6">
         More questions left? Contact Us
       </p>
 
       <form
         autoComplete="off"
-        className="mx-auto flex flex-col md:justify-center md:items-center px-4 max-w-3xl 2xl:max-w-4xl"
+        className="mx-auto flex flex-col md:justify-center md:items-center w-full md:min-w-[50%] md:w-[55%]"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Role Selection */}
-        <div className="flex flex-col md:flex-row justify-start items-start gap-0 md:gap-16">
+        <div className="flex flex-row md:flex-col justify-start gap-6 md:gap-4 mb-[1.25rem]">
           {["CANDIDATE", "COMPANY"].map((role) => (
             <div
-              className="flex flex-row justify-center items-center py-1.5 px-0 md:py-6"
+              className="flex text-md flex-row justify-between  md:justify-center items-center md:text-[calc(1.275rem+.3vw)] font-medium "
               key={role}
             >
               <Input
                 {...register("role", { required: "Select one of the roles" })}
-                className="w-6 h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
+                className=" w-4 h-4 md:w-6 md:h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
         before:absolute before:top-1/2 before:left-1/2 before:w-2 before:h-2 before:bg-white before:rounded-full before:transform before:scale-0 checked:before:scale-100 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%]"
                 type="radio"
                 id={`rdo${role}`}
                 value={role}
               />
-              <label
-                className="text-lg md:text-[1.5rem] 2xl:text-[1.6rem] ml-1 font-medium"
-                htmlFor={`rdo${role}`}
-              >
+              <label htmlFor={`rdo${role}`} className="ml-1 ">
                 I’m{" "}
                 {role === "CANDIDATE" ? "Candidate" : "Company representative"}
               </label>
@@ -166,7 +165,7 @@ const ContactUs: React.FC = () => {
                 message: "Inquiry should be at least 10 characters",
               },
             })}
-            className="w-full h-22 p-2 border border-gray-300 rounded-none placeholder:text-[1.5rem] outline-none focus:ring-2"
+            className="w-full h-22 p-2 border border-gray-300 rounded-none text-[1rem] placeholder:text-[1rem] md:placeholder:text-[1.5rem] outline-none focus:ring-2"
             placeholder="Inquiries"
             style={{ resize: "none" }}
           />
@@ -181,13 +180,13 @@ const ContactUs: React.FC = () => {
                 required:
                   "Please provide consent to store your contact details.",
               })}
-              className="w-6 h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
+              className="w-4 h-4 md:w-6 md:h-6 p-1 appearance-none border border-gray-400 checked:bg-blue-600 checked:border-transparent rounded-none relative
         before:absolute before:top-1/2 before:left-1/2 before:w-2 before:h-2 before:bg-white before:rounded-full before:transform before:scale-0 checked:before:scale-100 checked:before:translate-x-[-50%] checked:before:translate-y-[-50%]"
               type="checkbox"
               id="rdoConsent"
             />
             <label
-              className="text-lg md:text-[1.5rem] 2xl:text-[1.6rem] ml-1"
+              className="text-md md:text-[calc(1.275rem+.3vw)] font-medium  ml-1"
               htmlFor="rdoConsent"
             >
               I consent to store my contact details.

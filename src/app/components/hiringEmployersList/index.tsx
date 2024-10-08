@@ -39,12 +39,12 @@ export default function HiringEmployersList() {
   return (
     <section
       id="hiring_employers_list"
-      className=" px-4 py-8  max-w-[85rem] 2xl:max-w-[112rem] md:py-12  md:px-[4.9rem]  mx-auto    2xl:py-28 w-full"
+      className=" px-4 py-[5%]  max-w-[85rem] 2xl:max-w-[112rem] md:py-12  md:px-[4.9rem]  mx-auto    2xl:py-28 w-full"
     >
-      <h2 className="text-xl py-2 2xl:py-4 md:text-3xl lg:text-[2.8rem] 2xl:text-[3.5rem]  font-bold text-center mb-8 text-gold">
+      <h2 className="text-[6vw]  2xl:py-4 md:text-3xl lg:text-[2.8rem] 2xl:text-[3.5rem]  font-bold text-center mb-4 md:mb-8 text-gold">
         Current Top Employers Hiring
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
         {employers.map((employer, index) => (
           <Card key={index} className="relative flex flex-col p-0">
             {/* Card Header with Image */}
@@ -68,21 +68,23 @@ export default function HiringEmployersList() {
             </CardHeader>
             {/* Card Content */}
             <CardContent className="flex-grow z-10">
-              <CardTitle className="text-center py-4 text-[1.8rem] 2xl:text-[2.5rem] font-medium px-2">
+              <CardTitle className="text-center py-4 text-[calc(1.3rem+.6vw)]  font-medium px-2">
                 {employer.name}
               </CardTitle>
-              <p className="text-[3vw] md:text-xl xl:text-2xl xl:leading-8 2xl:text-2xl text-gray-600 py-4 text-center leading-relaxed">
+              <p className="text-[3vw] xxl:text-[calc(1.275rem+.3vw)]   text-gray-600 py-4 text-center leading-relaxed ">
                 {employer.description}
               </p>
             </CardContent>
             {/* Card Footer */}
-            <CardFooter className="flex justify-between items-center">
-              <span className="text-xl font-medium 2xl:text-2xl">
-                {employer.activePositions} active positions
+            <CardFooter className="flex flex-col justify-start items-start  md:flex-row md:justify-between md:items-center">
+              <span className="text-xl font-medium 2xl:text-2xl mb-2 md:mb-0 text-red whitespace-nowrap mr-1">
+                {employer.activePositions}{" "}
+                <span className="text-black">active positions</span>
               </span>
+
               <Button
                 variant="outline"
-                className="rounded-full text-lg 2xl:text-2xl  p-4 2xl:p-8 font-bold text-primary"
+                className="  rounded-full text-lg 2xl:text-2xl  p-4 2xl:p-8 font-bold text-primary w-full md:w-auto "
               >
                 FIND MORE
               </Button>

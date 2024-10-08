@@ -71,6 +71,7 @@ const config: Config = {
         gold: "#b8860b",
       },
       screens: {
+        xxl: "1440px",
         "2xl": "1536px",
       },
     },

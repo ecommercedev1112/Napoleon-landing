@@ -23,7 +23,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex  flex-1 ml-16 text-[1.75rem]  2xl:text-[2.2rem] font-light">
+        <nav className="hidden md:flex  flex-1 ml-16 text-[1.75rem]  2xl:text-[2rem] font-light">
           {NavLinks.map(({ href, label }, index) => (
             <span key={href} className="flex items-center">
               <Link className=" p-2" href={href}>
@@ -40,7 +40,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center text-[1.75rem] 2xl:text-[2.2rem] font-light">
+        <div className="flex items-center text-[1.75rem] 2xl:text-[2rem] font-light">
           <Link href="#how_it_works" className="hidden md:inline-block">
             How this works
           </Link>

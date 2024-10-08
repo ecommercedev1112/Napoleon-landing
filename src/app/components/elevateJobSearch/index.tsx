@@ -13,23 +13,21 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
   description,
 }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-2 items-center text-center md:text-left">
+    <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-0 lg:gap-2 items-center text-center md:text-left">
       <div className="flex justify-center mb-2 md:mb-0">
         <Image
           src={icon}
           width={150}
           height={150}
           alt={title}
-          className="w-1/5 md:w-24 md:h-24 2xl:w-36 2xl:h-36"
+          className="w-20 h-20 md:w-12 md:h-12 lg:w-24 lg:h-24 2xl:w-36 2xl:h-36"
           objectFit="contain"
           priority
         />
       </div>
-      <div className="flex flex-col items-center md:items-start md:gap-2.5">
-        <h2 className="text-xl md:text-[1.8rem] 2xl:text-[2.2rem] font-bold mb-2">
-          {title}
-        </h2>
-        <p className="text-muted-foreground text-[3vw] md:text-[1vw] lg:max-w-[18rem]  2xl:text-[1vw] max-w-[15rem] 2xl:max-w-[24rem] md:leading-relaxed">
+      <div className="flex flex-col items-center md:items-start">
+        <h2 className="text-[4vw] md:text-[2vw] font-bold lg:mb-2">{title}</h2>
+        <p className="text-[3vw]  max-w-[16rem] text-muted-foreground md:text-[1vw] md:max-w-[9rem] lg:max-w-[16rem] 2xl:max-w-[22rem]">
           {description}
         </p>
       </div>
@@ -40,10 +38,10 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 const ElevateJobSearch: React.FC = () => {
   return (
     <section id="elevate_job_search" className="bg-[#f2f2f2]">
-      <div className="w-full max-w-[85rem] mx-auto py-4 md:py-12 md:px-20 lg:px-28  2xl:max-w-[112rem] 2xl:px-40  2xl:py-28 ">
-        <div className="max-w-2xl 2xl:max-w-5xl mx-auto hidden md:block">
+      <div className="w-full h-full">
+        <div className="mx-auto hidden md:flex justify-center items-center w-full text-center ">
           <p
-            className="text-[1.55rem] text-center font-medium leading-relaxed mt-16 2xl:text-[2.2rem] 2xl:leading-[3rem] 2xl:m-0"
+            className="text-[1.75vw] text-center font-medium leading-relaxed pt-[7%]  max-w-[50%] w-full"
             // style={{ lineHeight: "2.4rem" }}
           >
             We create meaningful connections between candidates and employers
@@ -52,14 +50,10 @@ const ElevateJobSearch: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-12 lg:my-20 w-full lg:mb-0">
-          <div className="flex items-center justify-start h-full  w-full md:gap-10">
-            <h1
-              className="text-[6vw] text-center md:text-[3vw] md:leading-[4vw] font-normal md:text-center w-full md:max-w-md  2xl:max-w-full md:ml-28  2xl:ml-0 2xl:mr-28  leading-relaxed "
-              // style={{ lineHeight: "3.8rem" }}
-            >
-              Elevate Your Job{" "}
-              <span className="  whitespace-nowrap">Search Experience</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start py-[5%]">
+          <div className="flex items-center justify-start h-full  w-full gap-2 md:gap-10">
+            <h1 className=" text-[6vw] md:text-[3vw] font-normal md:ml-[20%] md:max-w-[calc(12rem+2vw)] lg:max-w-[calc(12rem+6vw)] xl:max-w-[calc(12rem+14vw)] text-center leading-[4vw] w-full ">
+              Elevate Your Job Search Experience
             </h1>
           </div>
 
