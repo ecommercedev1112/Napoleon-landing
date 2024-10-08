@@ -70,11 +70,11 @@ const ContactUs: React.FC = () => {
 
       <form
         autoComplete="off"
-        className="mx-auto flex flex-col md:justify-center md:items-center w-full md:min-w-[50%] md:w-[55%]"
+        className="mx-auto flex flex-col md:justify-center md:items-center w-full md:min-w-[50%] md:w-[80%] lg:w-[55%]"
         onSubmit={handleSubmit(onSubmit)}
       >
         {/* Role Selection */}
-        <div className="flex flex-row md:flex-col justify-start gap-6 md:gap-4 mb-[1.25rem]">
+        <div className="flex flex-row md:flex-row justify-start gap-6 md:gap-4 mb-[1.25rem]">
           {["CANDIDATE", "COMPANY"].map((role) => (
             <div
               className="flex text-md flex-row justify-between  md:justify-center items-center md:text-[calc(1.275rem+.3vw)] font-medium "

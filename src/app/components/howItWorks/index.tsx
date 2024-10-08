@@ -58,7 +58,7 @@ export const HowItWorks = () => {
           HOW THIS WORKS
         </h1>
 
-        <p className="w-full mx-auto md:mx-0 text-[4.vw] max-w-[22rem] lg:max-w-[28rem] xl:max-w-[38rem] md:text-[1.75vw] text-center md:text-left  mt-[5%] lg:text-[1.6rem 2xl:text-[2rem]  2xl:max-w-[52rem] font-extralight">
+        <p className="w-full mx-auto md:mx-0 md:mb-10 text-[4.vw] max-w-[22rem] lg:max-w-[28rem] xl:max-w-[38rem] md:text-[1.75vw] text-center md:text-left  mt-[5%] lg:text-[1.6rem 2xl:text-[2rem]  2xl:max-w-[52rem] font-extralight">
           We care about your comfort, so our team has created a video tutorial
           to simplify the platform adaptation process.
         </p>
@@ -78,7 +78,7 @@ export const HowItWorks = () => {
               </video>
               <h2
                 className={`text-[4vw] font-bold w-full md:text-[1.75vw] ${
-                  video.title === "For Companies" ? "text-right" : "text-left"
+                  video.title === "For Companies" ? "sm:text-right" : "text-left"
                 } ${video.color}`}
               >
                 {video.title}

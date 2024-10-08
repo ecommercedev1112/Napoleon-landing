@@ -68,15 +68,15 @@ export default function HiringEmployersList() {
             </CardHeader>
             {/* Card Content */}
             <CardContent className="flex-grow z-10">
-              <CardTitle className="text-center py-4 text-[calc(1.3rem+.6vw)]  font-medium px-2">
+              <CardTitle className="text-center py-4 text-[calc(1.3rem+.6vw)] font-medium px-2">
                 {employer.name}
               </CardTitle>
-              <p className="text-[3vw] xxl:text-[calc(1.275rem+.3vw)]   text-gray-600 py-4 text-center leading-relaxed ">
+              <p className="text-[3vw] xxl:text-[calc(1.275rem+.3vw)] text-gray-600 py-4 text-center leading-relaxed lg:text-[2vw]">
                 {employer.description}
               </p>
             </CardContent>
             {/* Card Footer */}
-            <CardFooter className="flex flex-col justify-start items-start  md:flex-row md:justify-between md:items-center">
+            <CardFooter className="flex flex-col sm:gap-2.5 justify-start items-start xl:flex-row xl:justify-between xl:items-center">
               <span className="text-xl font-medium 2xl:text-2xl mb-2 md:mb-0 text-red whitespace-nowrap mr-1">
                 {employer.activePositions}{" "}
                 <span className="text-black">active positions</span>
@@ -84,7 +84,7 @@ export default function HiringEmployersList() {
 
               <Button
                 variant="outline"
-                className="  rounded-full text-lg 2xl:text-2xl  p-4 2xl:p-8 font-bold text-primary w-full md:w-auto "
+                className="rounded-full text-lg 2xl:text-2xl p-4 2xl:p-8 font-bold text-primary w-full xl:w-auto "
               >
                 FIND MORE
               </Button>
