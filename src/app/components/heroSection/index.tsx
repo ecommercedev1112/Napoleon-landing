@@ -8,7 +8,7 @@ interface ActionButtonProps {
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({ label }) => (
-  <Button className="uppercase font-bold  w-full px-[24vw]  text-[calc(1.25rem+0.3vw)]  rounded-full   md:h-[calc(3rem+.2vw)] md:px-[calc(1rem+.1vw)] lg:h-[calc(2.8rem+1vw)] lg:px-[calc(2.5rem+.5vw)]  xl:h-[calc(2.8rem+1vw)] xl:px-[calc(4.5rem+.5vw)] 2xl:h-[calc(3.8rem+1vw)] 2xl:px-[calc(7rem+1vw)]">
+  <Button className="border rounded-lg shadow-lg focus:ring focus:outline-none transition-opacity duration-1000 ease-out opacity-100 hover:opacity-20 uppercase font-bold  w-full px-[24vw]  text-[calc(1.25rem+0.3vw)]  rounded-full   md:h-[calc(3rem+.2vw)] md:px-[calc(1rem+.1vw)] lg:h-[calc(2.8rem+1vw)] lg:px-[calc(2.5rem+.5vw)]  xl:h-[calc(2.8rem+1vw)] xl:px-[calc(4.5rem+.5vw)] 2xl:h-[calc(3.8rem+1vw)] 2xl:px-[calc(7rem+1vw)]">
     {label}
   </Button>
 );

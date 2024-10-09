@@ -84,7 +84,7 @@ export default function HiringEmployersList() {
 
               <Button
                 variant="outline"
-                className="rounded-full text-lg 2xl:text-2xl p-4 2xl:p-8 font-bold text-primary w-full xl:w-auto "
+                className="border rounded-lg shadow-lg focus:ring focus:outline-none transition-opacity duration-1000 ease-out opacity-100 hover:opacity-20 rounded-full text-lg 2xl:text-2xl p-4 2xl:p-8 font-bold text-primary w-full xl:w-auto "
               >
                 FIND MORE
               </Button>

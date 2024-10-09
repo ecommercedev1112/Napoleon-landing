@@ -50,7 +50,7 @@ const ContactUs: React.FC = () => {
         id={id}
         type={type}
         {...register(id as keyof FormInputs, validationRules)}
-        className="w-full  h-[3.8rem] md:h-[4.4rem] text-[1rem] placeholder:text-[1rem] md:text-[calc(1.275rem+.3vw)] 2xl:h-[4.6rem] md:placeholder:text-[calc(1.275rem+.3vw)] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
+        className="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none w-full  h-[3.8rem] md:h-[4.4rem] text-[1rem] placeholder:text-[1rem] md:text-[calc(1.275rem+.3vw)] 2xl:h-[4.6rem] md:placeholder:text-[calc(1.275rem+.3vw)] p-2 border border-gray-300 rounded-none outline-none focus:ring-2 focus:ring-blue-400"
         placeholder={placeholder}
         disabled={disabled}
       />
@@ -165,7 +165,7 @@ const ContactUs: React.FC = () => {
                 message: "Inquiry should be at least 10 characters",
               },
             })}
-            className="w-full h-22 p-2 border border-gray-300 rounded-none text-[1rem] placeholder:text-[1rem] md:placeholder:text-[1.5rem] outline-none focus:ring-2"
+            className="block w-full px-5 py-2 border rounded-lg bg-white shadow-lg placeholder-gray-400 text-gray-700 focus:ring focus:outline-none w-full h-22 p-2 border border-gray-300 rounded-none text-[1rem] placeholder:text-[1rem] md:placeholder:text-[1.5rem] outline-none focus:ring-2"
             placeholder="Inquiries"
             style={{ resize: "none" }}
           />
@@ -199,9 +199,9 @@ const ContactUs: React.FC = () => {
         <Button
           type="submit"
           size="xl"
-          className="mx-auto  w-full  uppercase  md:w-[75%] mt-4 rounded-full font-bold text-xl 2xl:text-3xl md:text-2xl h-[3.1rem] 2xl:h-[3.5rem]  "
+          className="border rounded-lg shadow-lg focus:ring focus:outline-none mx-auto w-full uppercase md:w-[75%] mt-4 rounded-full font-bold text-xl 2xl:text-3xl md:text-2xl h-[3.1rem] 2xl:h-[3.5rem] transition-opacity duration-1000 ease-out opacity-100 hover:opacity-20"
         >
-          SEND
+          send
         </Button>
       </form>
     </section>
